@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{490A4997-4AF7-480C-9D4E-1642845052D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shakespeare.Forms</RootNamespace>
+    <AssemblyName>Shakespeare.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\FakturaController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\PersonaleoplysningerController.cs" />
+    <Compile Include="IViewFactory.cs" />
+    <Compile Include="Models\FakeXmlOffentligJournalProvider.cs" />
+    <Compile Include="Models\Faktura.cs" />
+    <Compile Include="Models\Fakturalinje.cs" />
+    <Compile Include="Models\Forplejning.cs" />
+    <Compile Include="Models\IOffentligJournalProvider.cs" />
+    <Compile Include="Models\Journallinje.cs" />
+    <Compile Include="Models\Journallinjekilde.cs" />
+    <Compile Include="Models\Kataloger\BehandlingKatalog.cs" />
+    <Compile Include="Models\Kataloger\IBehandlingKatalog.cs" />
+    <Compile Include="Models\Kataloger\IDbConnectionFactory.cs" />
+    <Compile Include="Models\Kataloger\IJournalKatalog.cs" />
+    <Compile Include="Models\Kataloger\ILokaleKatalog.cs" />
+    <Compile Include="Models\Kataloger\IOpholdKatalog.cs" />
+    <Compile Include="Models\Kataloger\IPatientLæser.cs" />
+    <Compile Include="Models\Kataloger\IPatientSkriver.cs" />
+    <Compile Include="Models\Kataloger\IPersonaleKatalog.cs" />
+    <Compile Include="Models\Kataloger\IVærelseKatalog.cs" />
+    <Compile Include="Models\Kataloger\JournalKatalog.cs" />
+    <Compile Include="Models\Kataloger\LokaleKatalog.cs" />
+    <Compile Include="Models\Kataloger\LokaleKatalogStub.cs" />
+    <Compile Include="Models\Kataloger\OffentligPatientLæser.cs" />
+    <Compile Include="Models\Kataloger\OpholdKatalog.cs" />
+    <Compile Include="Models\Kataloger\PatientSkriver.cs" />
+    <Compile Include="Models\Kataloger\PersonaleKatalog.cs" />
+    <Compile Include="Models\Kataloger\SqlConnectionFactory.cs" />
+    <Compile Include="Models\Kataloger\VærelseKatalog.cs" />
+    <Compile Include="Models\LokaleMedTid.cs" />
+    <Compile Include="Models\PersonaleBehandlingslinje.cs" />
+    <Compile Include="Models\Værelse.cs" />
+    <Compile Include="Controllers\OpretBehandlingController.cs" />
+    <Compile Include="Models\Behandling.cs" />
+    <Compile Include="Models\Behandlingslinje.cs" />
+    <Compile Include="Models\Genoptræning.cs" />
+    <Compile Include="Models\Hospital.cs" />
+    <Compile Include="Models\Lokale.cs" />
+    <Compile Include="Models\Operation.cs" />
+    <Compile Include="Models\Ophold.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Personale.cs" />
+    <Compile Include="Models\Speciale.cs" />
+    <Compile Include="Models\Ugedage.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFactory.cs" />
+    <Compile Include="Views\Banner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Banner.Designer.cs">
+      <DependentUpon>Banner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BehandlingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BehandlingForm.Designer.cs">
+      <DependentUpon>BehandlingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FakturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FakturaForm.Designer.cs">
+      <DependentUpon>FakturaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IconLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\IconLabel.Designer.cs">
+      <DependentUpon>IconLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FindTidligereOpholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FindTidligereOpholdForm.Designer.cs">
+      <DependentUpon>FindTidligereOpholdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\JournalForm.Designer.cs">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonaleoplysningerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PersonaleoplysningerForm.Designer.cs">
+      <DependentUpon>PersonaleoplysningerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\libs\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Calendar">
+      <HintPath>..\..\libs\System.Windows.Forms.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.Misc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\System.Windows.Forms.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\FakeOffentligJournal.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Shakespeare.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Shakespeare_log.ldf">
+      <DependentUpon>Shakespeare.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Logo.v2.png" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\Logo.v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Banner.resx">
+      <DependentUpon>Banner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BehandlingForm.resx">
+      <DependentUpon>BehandlingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FakturaForm.resx">
+      <DependentUpon>FakturaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FindTidligereOpholdForm.resx">
+      <DependentUpon>FindTidligereOpholdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\JournalForm.resx">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PersonaleoplysningerForm.resx">
+      <DependentUpon>PersonaleoplysningerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
